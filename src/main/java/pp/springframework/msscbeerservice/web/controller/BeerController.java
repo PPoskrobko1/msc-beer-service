@@ -8,7 +8,7 @@ import pp.springframework.msscbeerservice.web.model.BeerDTO;
 
 import java.util.UUID;
 
-@RequestMapping
+@RequestMapping("/api/v1/beer")
 @RestController
 public class BeerController {
 
@@ -25,7 +25,7 @@ public class BeerController {
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
-    @PutMapping
+    @PutMapping("/{beerId}")
     public ResponseEntity updateBeerId(@PathVariable("beerId") UUID beerId, @RequestBody BeerDTO beerDTO) {
         //todo impl
         return new ResponseEntity(HttpStatus.NO_CONTENT);
